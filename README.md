@@ -2,8 +2,6 @@
 
 Chef Claude is a sophisticated web application designed to bridge the gap between available household ingredients and high-quality culinary creation. By leveraging advanced large language models (LLMs), the platform provides an intuitive interface for users to generate detailed, structured recipes based on specific inventory constraints.
 
-## Project Overview
-
 The core objective of Chef Claude is to minimize food waste and enhance home cooking through intelligent automation. The system utilizes a multi-model approach, integrating specialized AI SDKs to process natural language inputs and return precisely formatted markdown recipes. This ensures that users receive not just a list of instructions, but a professional culinary guide tailored to their immediate needs.
 
 ## Visual Documentation
