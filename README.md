@@ -45,13 +45,12 @@ The system is designed to provide diverse culinary perspectives, ensuring that s
 *   **Typography & Styling:** Context-aware CSS with Bootstrap 5 integration
 
 ### Artificial Intelligence Integration
-*   **Mistral AI:** Utilized via Hugging Face Inference for robust instruction-following and recipe logic.
-*   **Claude 3 (Anthropic):** Implementation support for high-fidelity natural language processing.
+*   **Mistral AI:** Integrated via **Hugging Face Inference (Mistral-7B-Instruct)** to provide robust natural language processing and high-fidelity recipe generation.
 *   **Markdown Processing:** `react-markdown` integration for semantic rendering of AI-generated content.
 
 ## Implementation Details
 
-The application architecture follows a modular component-based design, ensuring separation of concerns between UI rendering, state logic, and API communication. The AI integration layer is abstracted to handle asynchronous requests efficiently, featuring smooth transitions and auto-scroll functionality for enhanced user experience.
+The application architecture follows a modular component-based design, ensuring separation of concerns between UI rendering, state logic, and API communication. The AI integration layer is abstracted to handle asynchronous requests via Hugging Face, featuring smooth transitions and auto-scroll functionality for enhanced user experience.
 
 ## Deployment and Setup
 
@@ -71,8 +70,7 @@ The application architecture follows a modular component-based design, ensuring 
 3.  Configure Environment Variables:
     Create a `.env` file in the root directory:
     ```env
-    VITE_ANTHROPIC_API_KEY=your_api_key
-    VITE_HF_TOKEN=your_api_token
+    VITE_HF_TOKEN=your_huggingface_api_token
     ```
 4.  Execute Development Build:
     ```bash
