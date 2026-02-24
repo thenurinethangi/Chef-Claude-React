@@ -1,128 +1,82 @@
-# Chef Claude: Advanced AI-Driven Gastronomic Synthesis
+# Chef Claude: AI-Powered Culinary Intelligence
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-7.1-646CFF.svg)](https://vitejs.dev/)
+Chef Claude is a sophisticated web application designed to bridge the gap between available household ingredients and high-quality culinary creation. By leveraging advanced large language models (LLMs), the platform provides an intuitive interface for users to generate detailed, structured recipes based on specific inventory constraints.
 
-Chef Claude is an enterprise-grade web application designed to optimize culinary outputs through the integration of Large Language Models (LLMs). The platform serves as a sophisticated interface between fragmented household inventories and structured, professional-grade recipe documentation.
+## Project Overview
 
----
-
-## Table of Contents
-- [Executive Summary](#executive-summary)
-- [System Capabilities](#system-capabilities)
-- [Technical Architecture](#technical-architecture)
-- [Visual Documentation](#visual-documentation)
-- [Installation & Deployment](#installation--deployment)
-- [Technical Specification](#technical-specification)
-- [Contributing](#contributing)
-
----
-
-## Executive Summary
-Chef Claude addresses the challenge of resource-constrained meal planning. By utilizing a multi-agent AI architecture (Mistral-7B and Claude-3), the system processes natural language ingredient lists to synthesize unique, instructionally dense recipes. The application focuses on reducing cognitive overhead for the user while maximizing the utility of existing gastronomic resources.
-
-## System Capabilities
-*   **Predictive Recipe Synthesis**: Dynamically generates recipes tailored to specific ingredient constraints.
-*   **Stochastic Output Variance**: Ensures diverse culinary suggestions even with identical input parameters.
-*   **Semantic Rendering**: Implements high-fidelity Markdown parsing for professional instructional formatting.
-*   **Reactive UI/UX**: Features a highly responsive state-management system and automated viewport optimization (smooth-scroll logic).
-
-## Technical Architecture
-
-The application is built on a modular, component-based framework designed for scalability and high-performance rendering.
-
-| Layer | Technology | Function |
-| :--- | :--- | :--- |
-| **View Layer** | React 19 / Vite | Component architecture and optimized build-cycle |
-| **Logic Layer** | Redux-style State Management | Handling asynchronous data flows and UI state |
-| **AI Engine** | Anthropic / Mistral (HF) | Large Language Model processing and inference |
-| **Style Layer** | Modular CSS / Bootstrap 5 | Responsive design and consistent visual tokens |
-
----
+The core objective of Chef Claude is to minimize food waste and enhance home cooking through intelligent automation. The system utilizes a multi-model approach, integrating specialized AI SDKs to process natural language inputs and return precisely formatted markdown recipes. This ensures that users receive not just a list of instructions, but a professional culinary guide tailored to their immediate needs.
 
 ## Visual Documentation
 
-### I. Primary Portal Interface
-A minimalist landing experience designed to minimize user friction during the initial engagement phase.
+### Application Interface
+The primary workspace provides a clean, minimalist environment for ingredient management and recipe generation.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1227).png" width="90%" alt="Landing Interface" />
-</p>
+![Application Dashboard](src/assets/project_screenshots/Screenshot%20(1227).png)
 
-### II. Data Entry & Validation
-User-driven ingredient indexing featuring real-time state synchronization.
+### Ingredient Management
+Users can rapidly inventory their available items through a streamlined input system engineered for efficiency.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1228).png" width="90%" alt="Input Interface" />
-</p>
+![Ingredient Input Interface](src/assets/project_screenshots/Screenshot%20(1228).png)
 
-### III. Inventory Aggregation
-Structural representation of gathered data points prior to synthesis.
+### Dynamic Inventory Tracking
+The application maintains a real-time list of added ingredients, allowing for quick review before committing to the generation process.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1229).png" width="90%" alt="Inventory View" />
-</p>
+![Inventory Tracking](src/assets/project_screenshots/Screenshot%20(1229).png)
 
-### IV. Inference & Synthesis Engine
-The transitional state where LLM models process the aggregated ingredient vector.
+### Automated Recipe Synthesis
+Once the inventory requirements are met, the underlying AI engine synthesizes a unique recipe, optimizing for the provided ingredients.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1230).png" width="90%" alt="Processing State" />
-</p>
+![Generation Process](src/assets/project_screenshots/Screenshot%20(1230).png)
 
-### V. Culinary Output Analysis (Phase A)
-Rendering of the primary recipe output with full semantic hierarchy.
+### Structural Output Analysis
+The resulting output is rendered with high fidelity, providing clear hierarchy, preparation steps, and serving suggestions.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1231).png" width="90%" alt="Recipe Output 1" />
-</p>
+![Recipe Output Analysis 1](src/assets/project_screenshots/Screenshot%20(1231).png)
 
-### VI. Culinary Output Analysis (Phase B)
-Demonstration of system variance and alternate recipe structures.
+### Intelligent Variation
+The system is designed to provide diverse culinary perspectives, ensuring that subsequent requests for the same ingredients yield different results.
 
-<p align="center">
-  <img src="src/assets/project_screenshots/Screenshot (1232).png" width="90%" alt="Recipe Output 2" />
-</p>
+![Recipe Output Analysis 2](src/assets/project_screenshots/Screenshot%20(1232).png)
 
----
+## Technical Architecture
 
-## Installation & Deployment
+### Core Technologies
+*   **Frontend Framework:** React 19 (utilizing functional components and modern Hooks API)
+*   **Build Optimization:** Vite
+*   **State Management:** Reactive state handling for inventory and asynchronous data fetching
+*   **Typography & Styling:** Context-aware CSS with Bootstrap 5 integration
 
-### Environment Configuration
-The system requires valid API credentials from **Anthropic** and **Hugging Face**.
+### Artificial Intelligence Integration
+*   **Mistral AI:** Utilized via Hugging Face Inference for robust instruction-following and recipe logic.
+*   **Claude 3 (Anthropic):** Implementation support for high-fidelity natural language processing.
+*   **Markdown Processing:** `react-markdown` integration for semantic rendering of AI-generated content.
 
-1.  **Clone Source**:
+## Implementation Details
+
+The application architecture follows a modular component-based design, ensuring separation of concerns between UI rendering, state logic, and API communication. The AI integration layer is abstracted to handle asynchronous requests efficiently, featuring smooth transitions and auto-scroll functionality for enhanced user experience.
+
+## Deployment and Setup
+
+### Prerequisites
+*   Node.js (LTS version recommended)
+*   NPM or Yarn package manager
+
+### Installation
+1.  Clone the repository:
     ```bash
     git clone https://github.com/thenurinethangi/Chef-Claude-React.git
-    cd react-project-two
     ```
-
-2.  **Dependency Resolution**:
+2.  Install dependencies:
     ```bash
     npm install
     ```
-
-3.  **Environment Setup**:
-    Initialize a `.env` file in the project root with the following secret keys:
+3.  Configure Environment Variables:
+    Create a `.env` file in the root directory:
     ```env
-    VITE_ANTHROPIC_API_KEY=your_key_here
-    VITE_HF_TOKEN=your_token_here
+    VITE_ANTHROPIC_API_KEY=your_api_key
+    VITE_HF_TOKEN=your_api_token
     ```
-
-4.  **Launch Process**:
+4.  Execute Development Build:
     ```bash
     npm run dev
     ```
-
-## Technical Specification
-*   **Asynchronous Handling**: Custom hook-like patterns for managing AI model latency.
-*   **Accessibility**: ARIA-compliant naming and semantic HTML5 implementation.
-*   **Build Optimization**: Tree-shaking and module pre-loading via Vite 7.
-
----
-
-## Contributing
-Professional contributions are welcome. Please ensure that all pull requests follow the established architectural patterns and maintain ESLint compliance.
-
-**Contact**: [Nurine Thangi](https://github.com/thenurinethangi)
